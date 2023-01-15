@@ -1,4 +1,15 @@
 package platform
 
 // TODO
-type Platform interface{}
+/*
+Предоставляет интрфейс для управления и
+Позволяет подписываться на свои события
+*/
+type Interface interface {
+	Controls
+	Subscriptions
+}
+
+type Controls interface{}
+
+type Subscriptions interface{}

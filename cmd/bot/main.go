@@ -13,8 +13,7 @@ func main() {
 
 	strategy := basic.New(platform, logger)
 
-	err := <-strategy.Run()
-	if err != nil {
+	if err := strategy.Run(); err != nil {
 		zeroLog.Error().Err(err)
 	}
 }

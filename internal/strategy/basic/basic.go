@@ -6,19 +6,18 @@ import (
 )
 
 type Strategy struct {
-	platform platform.Platform
-	logger   logger.Logger
+	platform platform.Interface
+	logger   logger.Interface
 }
 
 // TODO
-func New(platform platform.Platform, logger logger.Logger) *Strategy {
+func New(platform platform.Interface, logger logger.Interface) *Strategy {
 	return &Strategy{
 		platform: platform,
 		logger:   logger,
 	}
 }
 
-func (b *Strategy) Run() <-chan error {
-	ch := make(chan error)
-	return ch
+func (b *Strategy) Run() error {
+	return nil
 }

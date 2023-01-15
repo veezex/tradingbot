@@ -1,4 +1,4 @@
 package logger
 
 // TODO
-type Logger interface{}
+type Interface interface{}
