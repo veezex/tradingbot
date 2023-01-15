@@ -1,7 +1,7 @@
 package main
 
 import (
-	zeroLog "github.com/rs/zerolog/log"
+	"github.com/rs/zerolog/log"
 	"trading-bot/internal/logger/console"
 	"trading-bot/internal/platform/placeholder"
 	"trading-bot/internal/strategy/basic"
@@ -14,6 +14,6 @@ func main() {
 	strategy := basic.New(platform, logger)
 
 	if err := strategy.Run(); err != nil {
-		zeroLog.Error().Err(err)
+		log.Fatal().Err(err).Msg("")
 	}
 }

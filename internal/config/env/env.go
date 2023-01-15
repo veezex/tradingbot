@@ -2,7 +2,7 @@ package env
 
 import (
 	"github.com/joho/godotenv"
-	zeroLog "github.com/rs/zerolog/log"
+	"github.com/rs/zerolog/log"
 	"trading-bot/internal/config"
 )
 
@@ -10,7 +10,7 @@ import (
 func Read(envFile ...string) config.Config {
 	_, err := godotenv.Read(envFile...)
 	if err != nil {
-		zeroLog.Fatal().Err(err)
+		log.Fatal().Err(err).Msg("")
 	}
 
 	//r := reader(envs)

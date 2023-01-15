@@ -10,6 +10,10 @@ type Interface interface {
 	Subscriptions
 }
 
-type Controls interface{}
+type Controls interface {
+	GetWallet() Wallet
+}
 
 type Subscriptions interface{}
+
+type Wallet interface{}
